@@ -12,16 +12,18 @@ public class Solution {
         List<string> answer = new List<String>();
         
         for(int i = 1; i <= n; i++) {
+            bool div3 = i % 3 == 0;
+            bool div5 = i % 5 == 0;
             
-            if(i % 3 == 0 && i % 5 == 0) {
+            if(div3 && div5) {
                 answer.Add("FizzBuzz");
             }
             
-            else if(i % 3 == 0) {
+            else if(div3) {
                 answer.Add("Fizz");
             }
             
-            else if (i % 5 == 0) {
+            else if (div5) {
                 answer.Add("Buzz");
             }
             
@@ -35,6 +37,11 @@ public class Solution {
 }
 
 /*
+#1 try
 Runtime: 283 ms, faster than 5.68% of C# online submissions for Fizz Buzz.
 Memory Usage: 46.7 MB, less than 97.62% of C# online submissions for Fizz Buzz.
+
+#2 try
+Runtime: 268 ms, faster than 9.54% of C# online submissions for Fizz Buzz.
+Memory Usage: 46.8 MB, less than 93.20% of C# online submissions for Fizz Buzz.
 */
